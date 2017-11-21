@@ -61,7 +61,7 @@ class ORDER(object):
 		while 1:
 			head = {'Cookie':self.cookies}
 			for i in eval(get('https://shop.48.cn/pai/GetRightShowBids?id=2423',headers = head).content)['list']:
-            	list_amt.append(i['bid_amt'])
+		list_amt.append(i['bid_amt'])
 			top1 = int(sorted(list_amt)[-1])
 			if top1 > 35000:break # 设定上限值
 			if my < top1:
