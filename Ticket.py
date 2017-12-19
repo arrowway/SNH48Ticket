@@ -58,6 +58,8 @@ class ORDER(object):
 	            continue
 	
     def supervip(self):
+	list_amt = []
+	my = 0
         while 1:
                 head = {'Cookie':self.cookies}
                 for i in eval(get('https://shop.48.cn/pai/GetRightShowBids?id=2423',headers = head).content)['list']:
@@ -65,7 +67,7 @@ class ORDER(object):
                 top1 = int(sorted(list_amt)[-1])
                 if top1 > 35000:break # 设定上限值
                 if my < top1:
-                    my = int(sorted(list_amt)[-1]) + 101 # 加价额度
+                    my = int(top1) + 101 # 加价额度
                     print my
                 postdata = {
                             'id':'2423',
