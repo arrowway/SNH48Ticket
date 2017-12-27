@@ -46,4 +46,4 @@ SNH48Ticket 是一个用于SNH48官方商城切票捡漏脚本
 
 ## 关联库：
 
-requests,selenium,chromedriver
+![alt](https://img.shields.io/badge/requests--green.svg),![alt](https://img.shields.io/badge/selenium--yellowgreen.svg)
