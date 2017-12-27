@@ -1,5 +1,5 @@
 # SNH48官方商城门票捡漏
-
+[![Python]](https://img.shields.io/badge/Python-2.7-brightgreen.svg)
 SNH48官方商城门票捡漏 for Python 2.x
 
 声明：本脚本只做学习交流使用，请勿用于其他用途
@@ -35,6 +35,6 @@ SNH48官方商城门票捡漏 for Python 2.x
 
 * 基本查询，下单功能
 
-# 关联库：
+## 关联库：
 
 requests,selenium,chromedriver
