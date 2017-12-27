@@ -2,6 +2,7 @@
 ![alt](https://img.shields.io/badge/Python-2.7-brightgreen.svg)
 
 SNH48Ticket 是一个用于SNH48官方商城切票捡漏脚本，用多线程的方式对门票捡漏
+
 妈妈再也不用担心我切不到票啦！
 
 声明：本脚本只做学习交流使用，请勿用于其他用途
