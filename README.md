@@ -11,7 +11,7 @@ SNH48Ticket 是一个用于SNH48官方商城切票捡漏脚本
 
 |Author|莽夫|
 |---|---
-|E-mail|526189921@qq.com
+|URL|https://github.com/DipperStar/SNH48Ticket
 
 
 ## 更新日志
