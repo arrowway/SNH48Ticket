@@ -41,7 +41,8 @@ class ORDER(object):
     def ticket(self):
         url = 'http://shop.48.cn'
         res = self.req.get(url,headers = {'Cookie':self.cookies})
-        postData = {'id': self.ticketcode, 'num': '1', 'seattype': self.seattype,'brand_id': '3', 'r': '0.3731131006391708'}  # id:门票编号，num:门票数量，seattype:门票类型,2为VIP，3为普座，4为站票，brand_id：团体编号(gnz48为3)，’r‘:随机数
+        postData = {'id': self.ticketcode, 'num': '1', 'seattype': self.seattype,
+                    'brand_id': '3', 'r': '0.3731131006391708','choose_times_end':'-1'}  # id:门票编号，num:门票数量，seattype:门票类型,2为VIP，3为普座，4为站票，brand_id：团体编号(gnz48为3)，’r‘:随机数
         url = 'https://shop.48.cn/tickets/saleList?id={}&brand_id=3'.format(self.ticketcode)
         types = int(self.seattype) - 1
         while 1:
