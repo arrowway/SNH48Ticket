@@ -1,7 +1,7 @@
 # SNH48官方商城门票捡漏
 ![alt](https://img.shields.io/badge/Python-2.7-brightgreen.svg)
 
-SNH48Ticket 是一个用于SNH48官方商城切票捡漏脚本
+### SNH48Ticket 是一个用于SNH48官方商城的切票捡漏脚本
 
 查询余票，自动下单，多线程请求
 
