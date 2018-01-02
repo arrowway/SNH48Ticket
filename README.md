@@ -13,7 +13,7 @@
 |---|---
 |URL|https://github.com/DipperStar/SNH48Ticket
 
-## 使用方法
+## 使用说明
 
 * 主函数
 ```Python
@@ -45,11 +45,11 @@ if __name__ == '__main__':
     切票页面地址最后四位数字编码即为门票编号
     ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathyl7j20nf0ia7cm.jpg)
 
-* 如何开始
+## 如何开始
 
     填写好必要参数后，在命令行输入 python Ticket.py 运行脚本
 
-* 切票流程
+## 切票流程
 
     1.开始运行脚本后会弹出chrome窗口，跳转到48会员登录页面，自动输入账号密码并点击登录
     ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathszbj20le0e3wgf.jpg)
@@ -58,6 +58,31 @@ if __name__ == '__main__':
     ![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2patmfryj210o0k71kx.jpg)
 
     3.脚本开始自动捡漏，只需耐心等待，每次下单成功，会print order succeed...，此时可前往商城订单页面查看是否抢到门票
+
+## 超V出价
+    
+    填写需要出价的门票编号
+    
+    ```Python
+    postdata = {
+                'id':'2423',
+                'amt':str(my),
+                'num':'1'
+               }
+    ```
+    
+    填写需要拍卖的超V座次， -1,-2,-3 分别为 中、左、右 超V
+    
+    ```Python
+    top1 = int(sorted(list_amt)[-1])
+    ```
+    
+    填写出价积分上限阈值
+    
+    ```Python
+    if top1 > 35000:break
+    ```
+
 ## 流程框图
 ![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2ro3n3c2j20qd0ecjs8.jpg)
 
