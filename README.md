@@ -28,8 +28,8 @@ if __name__ == '__main__':
 
     以下参数均为字符型
     
-    |变量名|username|password|ticketcode|seattype|brandid|teamtype
-    ||---|---|---|---|---|---
+    |变量名|username|password|ticketcode|seattype|brandid|teamtype
+    |---|---|---|---|---|---|---
     |说明|用户名|密码|门票编号|门票类型|团体编号|队伍编号
     
     各编号对应表：
