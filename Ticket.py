@@ -29,6 +29,7 @@ class ORDER(object):
         browser.find_element_by_id('username').send_keys(self.user)
         browser.find_element_by_id('password').send_keys(self.password)
         browser.find_element_by_id('submit').click()
+	time.sleep(5)
         browser.find_element_by_link_text('SNH48 GROUP官方商城').click()
         browser.switch_to_window(browser.window_handles[-1])
         for i in browser.get_cookies():
