@@ -53,9 +53,11 @@ if __name__ == '__main__':
 ## 切票流程
 
 1.开始运行脚本后会弹出chrome窗口，跳转到48会员登录页面，自动输入账号密码并点击登录
+
 ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathszbj20le0e3wgf.jpg)
 
-2.登录成功后，会自动弹出48商城页面，脚本获取cookie后会自动关闭chrome窗口，到此完成模拟登录。
+2.登录成功后，会自动弹出48商城页面，脚本获取cookie后会自动关闭chrome窗口，到此完成模拟登录
+
 ![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2patmfryj210o0k71kx.jpg)
 
 3.脚本开始自动捡漏，只需耐心等待，每次下单成功，会print order succeed...，此时可前往商城订单页面查看是否抢到门票
