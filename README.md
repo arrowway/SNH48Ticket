@@ -21,52 +21,56 @@ if __name__ == '__main__':
     urllib.getproxies_registry = lambda : {}
     se = ORDER('username','password','ticketcode','seattype','brandid','teamtype')
 ```
-参数说明：
+* 参数说明：
 
-以下参数均为字符型
+    以下参数均为字符型
 
-username：输入你的用户名，如'snh48000000001'
-password：密码
-ticketcode：门票编号
-seattype：门票类型
-brandid：团体编号
-teamtype：队伍编号
+    username：输入你的用户名，如'snh48000000001'
 
-各编号对应表：
+    password：密码
 
-|团体|SNH|BEJ|GNZ|SHY|CKG|
-|---|---|---|---|---|---
-|brandid|1|2|3|4|5
+    ticketcode：门票编号
 
-|队伍|G|N3|Z|
-|---|---|---|---
-|teamtype|0|1|3
+    seattype：门票类型
 
-|门票类型|VIP|普|站|
-|---|---|---|---
-|门票编号|2|3|4
+    brandid：团体编号
 
-门票编号获取方式：
+    teamtype：队伍编号
 
-切票页面地址最后四位数字编码即为门票编号
-![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathyl7j20nf0ia7cm.jpg)
+    各编号对应表：
 
-* 如何开始
+    |团体|SNH|BEJ|GNZ|SHY|CKG|
+    |---|---|---|---|---|---
+    |brandid|1|2|3|4|5
 
-填写好必要参数后，在命令行输入python Ticket.py运行脚本
+    |队伍|G|N3|Z|
+    |---|---|---|---
+    |teamtype|0|1|3
 
-* 切票流程
+    |门票类型|VIP|普|站|
+    |---|---|---|---
+    |门票编号|2|3|4
 
-1.开始运行脚本后会弹出chrome窗口，跳转到48会员登录页面，自动输入账号密码并点击登录
-![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathszbj20le0e3wgf.jpg)
+    门票编号获取方式：
 
-2.登录成功后，会自动弹出48商城页面，脚本获取cookie后会自动关闭chrome窗口，到此完成模拟登录。
-![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2patmfryj210o0k71kx.jpg)
+    切票页面地址最后四位数字编码即为门票编号
+    ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathyl7j20nf0ia7cm.jpg)
 
-3.脚本开始自动捡漏，只需耐心等待，每次下单成功，会print order succeed...，此时可前往商城订单页面查看是否抢到门票
-## 使用方法
+    * 如何开始
 
-* 流程说明
+        填写好必要参数后，在命令行输入python Ticket.py运行脚本
+
+    * 切票流程
+
+    1.开始运行脚本后会弹出chrome窗口，跳转到48会员登录页面，自动输入账号密码并点击登录
+    ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathszbj20le0e3wgf.jpg)
+
+    2.登录成功后，会自动弹出48商城页面，脚本获取cookie后会自动关闭chrome窗口，到此完成模拟登录。
+    ![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2patmfryj210o0k71kx.jpg)
+
+    3.脚本开始自动捡漏，只需耐心等待，每次下单成功，会print order succeed...，此时可前往商城订单页面查看是否抢到门票
+## 流程框图
+
 
 
 ## 更新日志
