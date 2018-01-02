@@ -20,12 +20,15 @@
 if __name__ == '__main__':
     urllib.getproxies_registry = lambda : {}
     se = ORDER('username','password','ticketcode','seattype','brandid','teamtype')
+    for i in range(30):
+        th = threading.Thread(target=se.ticket)
+        th.start()
 ```
 * 参数说明：
 
     以下参数均为字符型
     
-    ||username|password|ticketcode|seattype|brandid|teamtype
+    |变量名|username|password|ticketcode|seattype|brandid|teamtype
     ||---|---|---|---|---|---
     |说明|用户名|密码|门票编号|门票类型|团体编号|队伍编号
     
