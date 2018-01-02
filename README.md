@@ -59,8 +59,7 @@ if __name__ == '__main__':
 
     3.脚本开始自动捡漏，只需耐心等待，每次下单成功，会print order succeed...，此时可前往商城订单页面查看是否抢到门票
 ## 流程框图
-
-    ![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2ro3n3c2j20qd0ecjs8.jpg)
+![图片显示失败](https://wx4.sinaimg.cn/mw690/853af3eegy1fn2ro3n3c2j20qd0ecjs8.jpg)
 
 ## 更新日志
     [2018.01.02]
