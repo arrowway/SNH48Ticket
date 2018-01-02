@@ -14,6 +14,7 @@
 |URL|https://github.com/DipperStar/SNH48Ticket
 
 ## 使用方法
+
 * 必要参数修改
 ```Python
 if __name__ == '__main__':
@@ -21,7 +22,9 @@ if __name__ == '__main__':
     se = ORDER('username','password','ticketcode','seattype','brandid','teamtype')
 ```
 参数说明：
+
 以下参数均为字符型
+
 username：输入你的用户名，如'snh48000000001'
 password：密码
 ticketcode：门票编号
@@ -30,6 +33,7 @@ brandid：团体编号
 teamtype：队伍编号
 
 各编号对应表：
+
 |团体|SNH|BEJ|GNZ|SHY|CKG|
 |---|---|---|---|---|---
 |brandid|1|2|3|4|5
@@ -43,13 +47,16 @@ teamtype：队伍编号
 |门票编号|2|3|4
 
 门票编号获取方式：
+
 切票页面地址最后四位数字编码即为门票编号
 ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathyl7j20nf0ia7cm.jpg)
 
 * 如何开始
+
 填写好必要参数后，在命令行输入python Ticket.py运行脚本
 
 * 切票流程
+
 1.开始运行脚本后会弹出chrome窗口，跳转到48会员登录页面，自动输入账号密码并点击登录
 ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathszbj20le0e3wgf.jpg)
 
@@ -58,6 +65,7 @@ teamtype：队伍编号
 
 3.脚本开始自动捡漏，只需耐心等待，每次下单成功，会print order succeed...，此时可前往商城订单页面查看是否抢到门票
 ## 使用方法
+
 * 流程说明
 
 
