@@ -26,13 +26,6 @@ if __name__ == '__main__':
 ```
 * 参数说明：
 
-    以下参数均为字符型
-    
-    
-    |变量名|username|password|ticketcode|seattype|brandid|teamtype
-    |:---:|:---:|:---:|:---:|:---:|:---:|:---:
-    |说明|用户名|密码|门票编号|门票类型|团体编号|队伍编号
-    
     各编号对应表：
 
     |团体|SNH|BEJ|GNZ|SHY|CKG|
@@ -47,7 +40,7 @@ if __name__ == '__main__':
     |:---:|:---:|:---:|:---:
     |seattype|2|3|4
 
-    门票编号获取方式：
+    ticketcode获取方式：
 
     切票页面地址最后四位数字编码即为门票编号
     ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathyl7j20nf0ia7cm.jpg)
