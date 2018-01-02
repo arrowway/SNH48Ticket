@@ -40,9 +40,10 @@ if __name__ == '__main__':
     |:---:|:---:|:---:|:---:
     |seattype|2|3|4
 
-    ticketcode获取方式：
+* ticketcode获取方式：
 
     切票页面地址最后四位数字编码即为门票编号
+    
     ![图片显示失败](https://wx2.sinaimg.cn/mw690/853af3eegy1fn2pathyl7j20nf0ia7cm.jpg)
 
 ## 如何开始
