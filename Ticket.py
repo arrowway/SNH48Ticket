@@ -29,6 +29,7 @@ class ORDER(object):
         browser.find_element_by_id('username').send_keys(self.user)
         browser.find_element_by_id('password').send_keys(self.password)
         browser.find_element_by_id('submit').click()
+	time.sleep(5)
         browser.find_element_by_link_text('SNH48 GROUP官方商城').click()
         browser.switch_to_window(browser.window_handles[-1])
         for i in browser.get_cookies():
@@ -47,11 +48,12 @@ class ORDER(object):
                     'brand_id': '3', 'r': '0.3731131006391708','choose_times_end':'-1'}  # id:门票编号，num:门票数量，seattype:门票类型,2为VIP，3为普座，4为站票，brand_id：团体编号(gnz48为3)，’r‘:随机数
         url = 'https://shop.48.cn/Home/IndexTickets?brand_id={}&team_type={}&date_type=-1'.format(self.brandid,self.teamtype)
         index = 0
-    for i in eval(requests.get(url).content):
-        if i['tickets_id'] == int(self.ticketcode):
-            break
-        index += 1
-    types = int(self.seattype) - 1
+
+	for i in json.loads(requests.get(url).content):
+		if i['tickets_id'] == int(self.ticketcode):
+			break
+		index += 1
+	types = int(self.seattype) - 1
         
     while 1:
             try:
