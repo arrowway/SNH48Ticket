@@ -13,8 +13,8 @@ class ORDER(object):
         self.password = password
         self.ticketcode = ticketcode
         self.seattype = seattype
-	self.brandid = brandid
-	self.teamtype = teamtype
+    self.brandid = brandid
+    self.teamtype = teamtype
         self.cookies = ''
         self.req = requests.session()
         self.login()
@@ -47,32 +47,33 @@ class ORDER(object):
                     'brand_id': '3', 'r': '0.3731131006391708','choose_times_end':'-1'}  # id:门票编号，num:门票数量，seattype:门票类型,2为VIP，3为普座，4为站票，brand_id：团体编号(gnz48为3)，’r‘:随机数
         url = 'https://shop.48.cn/Home/IndexTickets?brand_id={}&team_type={}&date_type=-1'.format(self.brandid,self.teamtype)
         index = 0
-	for i in eval(requests.get(url).content):
-		if i['tickets_id'] == int(self.ticketcode):
-			break
-		index += 1
-	types = int(self.seattype) - 1
+    for i in eval(requests.get(url).content):
+        if i['tickets_id'] == int(self.ticketcode):
+            break
+        index += 1
+    types = int(self.seattype) - 1
         
-	while 1:
-	        try:
-	            res = self.req.get(url)
-	        except:
-	            traceback.print_exc()
-	            continue
-	        if json.loads(res.content)[index]['tickets_sales'][types]['amount']:
-	            resp = self.req.post('https://shop.48.cn/TOrder/add',headers={'Cookie': self.cookies}, data=postData)
-	            if resp.status_code == 200:
-	                print 'order succeed...'
-	        else:
-	            continue
-	
+    while 1:
+            try:
+                res = self.req.get(url)
+            except:
+                traceback.print_exc()
+                continue
+            json = res.json()
+            if json[index]['tickets_sales'][types]['amount']:
+                resp = self.req.post('https://shop.48.cn/TOrder/add',headers={'Cookie': self.cookies}, data=postData)
+                if resp.status_code == 200:
+                    print 'order succeed...'
+            else:
+                continue
+    
     def supervip(self):
-	list_amt = []
-	my = 0
+    list_amt = []
+    my = 0
         while 1:
                 head = {'Cookie':self.cookies}
                 for i in eval(get('https://shop.48.cn/pai/GetRightShowBids?id=2423',headers = head).content)['list']:
-        			list_amt.append(i['bid_amt'])
+                    list_amt.append(i['bid_amt'])
                 top1 = int(sorted(list_amt)[-1])
                 if top1 > 35000:break # 设定上限值
                 if my < top1:
@@ -87,7 +88,7 @@ class ORDER(object):
                 time.sleep(0.2)
 
 if __name__ == '__main__':
-	se = ORDER('username','password','ticketcode','seattype','brandid','teamtype')  # id:门票编号，seattype:门票类型,2为VIP，3为普座，4为站票
-	for i in range(30):
-	    th = threading.Thread(target=se.ticket)
-	    th.start()
+    se = ORDER('username','password','ticketcode','seattype','brandid','teamtype')  # id:门票编号，seattype:门票类型,2为VIP，3为普座，4为站票
+    for i in range(30):
+        th = threading.Thread(target=se.ticket)
+        th.start()
